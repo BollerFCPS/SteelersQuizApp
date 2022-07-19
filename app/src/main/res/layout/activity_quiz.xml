@@ -13,31 +13,35 @@
         android:layout_height="wrap_content"
         android:fontFamily="cursive"
         android:gravity="center_horizontal"
-        android:text=""
-        android:textColorHighlight="#3F51B5"
-        android:textSize="34sp" />
+        android:text="@string/blank"
+        android:textColor="#FFEB3B"
+        android:textSize="34sp"
+        android:layout_marginBottom="100sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="50sp">
 
         <Button
             android:id="@+id/trueButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginRight="50sp"
-            android:background="#000000"
-            android:text="True"
+            android:backgroundTint="#000000"
+            android:textColor="#FFEB3B"
+            android:text="@string/T"
             android:textSize="24sp" />
 
         <Button
             android:id="@+id/falseButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="#000000"
-            android:text="False"
+            android:backgroundTint="#000000"
+            android:textColor="#FFEB3B"
+            android:text="@string/F"
             android:textSize="24sp" />
 
     </LinearLayout>
@@ -47,16 +51,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:background="#000000"
-        android:text="-->"
-        android:textSize="24sp" />
+        android:backgroundTint="#000000"
+        android:textColor="#FFEB3B"
+        android:text="@string/RArrow"
+        android:textSize="24sp"
+        android:layout_marginBottom="100sp"/>
 
     <Button
         android:id="@+id/scoreButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000000"
-        android:text="View Score"
+        android:backgroundTint="#000000"
+        android:text="@string/ViewScore"
+        android:textColor="#FFEB3B"
         android:textSize="24sp" />
 
 

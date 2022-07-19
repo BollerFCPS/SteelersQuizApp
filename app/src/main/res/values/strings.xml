@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">SteelersQuizApp</string>
+    <string name="blank"></string>
+    <string name="T">True</string>
+    <string name="F">False</string>
+    <string name="q1Text">The PITTSBURGH STEELERS wear uniforms that are blue and yellow.</string>
+    <string name="q2Text">The PITTSBURGH STEELERS GOAT is \'Mean\' Joe Green.</string>
+    <string name="q3Text">The PITTSBURGH STEELERS will play at Heinz Field this coming (2022) season.</string>
+    <string name="q4Text">The PITTSBURGH STEELERS have won 6 Super Bowls.</string>
+    <string name="q5Text">The PITTSBURGH STEELERS are owned by the Rooney family.</string>
+    <string name="RArrow"><![CDATA[-->]]></string>
+    <string name="ViewScore">View Score</string>
+    <string name="Woohoo">Woohoo! That\'s it.</string>
+    <string name="WrongAns">You got it wrong.</string>
+    <string name="scoreHead">SCORE:</string>
+    <string name="no_score">no score</string>
+    <string name="email_score">Email Score</string>
+    <string name="emailSubject">New score on the Steelers Quiz App.</string>
+    <string name="emailBody1">\"I just got a \"</string>
+    <string name="emailBody2">\" on the Steelers Quiz App.\"</string>
+    <string name="noMoreQ">There are no more questions</string>
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
@@ -10,16 +10,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="50sp"
-        android:text="SCORE:"/>
+        android:text="@string/scoreHead"/>
 
     <TextView
         android:id="@+id/scoreNumTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="no score"
+        android:text="@string/no_score"
         android:textSize="50sp" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="50sp"
+        android:src="@drawable/steelers"
+        android:id="@+id/logoIV"/>
 
-
+    <Button
+        android:id="@+id/emailButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:backgroundTint="#000000"
+        android:text="@string/email_score"
+        android:textColor="#FAFAFA" />
 </LinearLayout>

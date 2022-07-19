@@ -32,11 +32,11 @@ public class QuizActivity extends AppCompatActivity {
         nextBut = (Button) findViewById(R.id.nextButton);
         scoreBut = (Button) findViewById(R.id.scoreButton);
         score = 0;
-        q1 = new question("The PITTSBURGH STEELERS wear uniforms that are blue and yellow.", false);
-        q2 = new question("The PITTSBURGH STEELERS GOAT is 'Mean' Joe Green.", true);
-        q3 = new question("The PITTSBURGH STEELERS will play at Heinz Field this coming (2022) season.", false);
-        q4 = new question("The PITTSBURGH STEELERS have won 6 Super Bowls.", true);
-        q5 = new question("The PITTSBURGH STEELERS are owned by the Rooney family.", true);
+        q1 = new question(getString(R.string.q1Text), false);
+        q2 = new question(getString(R.string.q2Text), true);
+        q3 = new question(getString(R.string.q3Text), false);
+        q4 = new question(getString(R.string.q4Text), true);
+        q5 = new question(getString(R.string.q5Text), true);
         questions = new question[] {q1, q2, q3, q4, q5};
         curIndex = 0;
         curQ = questions[curIndex];
@@ -46,11 +46,11 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (curQ.getCorAns()){
-                    message = "Woohoo! That's it.";
+                    message = getString(R.string.Woohoo);
                     score++;
                 }
                 else{
-                    message = "You got it wrong.";}
+                    message = getString(R.string.WrongAns);}
 
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
@@ -64,10 +64,10 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (curQ.getCorAns()){
-                    message = "You got it wrong.";
+                    message = getString(R.string.WrongAns);
                 }
                 else{
-                    message = "Woohoo! That's it.";
+                    message = getString(R.string.Woohoo);
                     score++;
                 }
                 Context context = getApplicationContext();
@@ -97,7 +97,7 @@ public class QuizActivity extends AppCompatActivity {
                     qTextTV.setText(tempQText);
                 }
                 else{
-                    Toast toast = Toast.makeText(getApplicationContext(), "There are no more questions", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(getApplicationContext(), R.string.noMoreQ, Toast.LENGTH_SHORT);
                     toast.show();
                 }
 
