@@ -13,27 +13,45 @@ import android.widget.Toast;
 public class QuizActivity extends AppCompatActivity {
 
     //declare variable for your UI elements
-    TextView qText;
-    Button tBut, fBut, scoreBut;
+    TextView qTextTV;
+    Button tBut, fBut, scoreBut, nextBut;
     String message;
-    int score;
+    int score, curIndex;
+    question q1, q2, q3, q4, q5, curQ;
+    question[] questions;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
         //initialize / inflate your UI elements
-        qText = (TextView) findViewById(R.id.questionText);
+        qTextTV = (TextView) findViewById(R.id.questionText);
         tBut = (Button) findViewById(R.id.trueButton);
         fBut = (Button) findViewById(R.id.falseButton);
+        nextBut = (Button) findViewById(R.id.nextButton);
         scoreBut = (Button) findViewById(R.id.scoreButton);
         score = 0;
-
+        q1 = new question("The PITTSBURGH STEELERS wear uniforms that are blue and yellow.", false);
+        q2 = new question("The PITTSBURGH STEELERS GOAT is 'Mean' Joe Green.", true);
+        q3 = new question("The PITTSBURGH STEELERS will play at Heinz Field this coming (2022) season.", false);
+        q4 = new question("The PITTSBURGH STEELERS have won 6 Super Bowls.", true);
+        q5 = new question("The PITTSBURGH STEELERS are owned by the Rooney family.", true);
+        questions = new question[] {q1, q2, q3, q4, q5};
+        curIndex = 0;
+        curQ = questions[curIndex];
+        qTextTV.setText(curQ.getQText());
         //do something with the UI elements
         tBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                message = "You got it wrong.";
+                if (curQ.getCorAns()){
+                    message = "Woohoo! That's it.";
+                    score++;
+                }
+                else{
+                    message = "You got it wrong.";}
+
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
 
@@ -45,7 +63,13 @@ public class QuizActivity extends AppCompatActivity {
         fBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                message = "Woohoo! That's it.";
+                if (curQ.getCorAns()){
+                    message = "You got it wrong.";
+                }
+                else{
+                    message = "Woohoo! That's it.";
+                    score++;
+                }
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
                 score += 1;
@@ -60,6 +84,23 @@ public class QuizActivity extends AppCompatActivity {
                 Intent showScore = new Intent(QuizActivity.this, ScoreActivity.class);
                 showScore.putExtra("scoreName", score);
                 startActivity(showScore);
+            }
+        });
+
+        nextBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                curIndex++;
+                if(curIndex < questions.length) {
+                    curQ = questions[curIndex];
+                    String tempQText = curQ.getQText();
+                    qTextTV.setText(tempQText);
+                }
+                else{
+                    Toast toast = Toast.makeText(getApplicationContext(), "There are no more questions", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+
             }
         });
     }

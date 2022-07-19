@@ -13,11 +13,12 @@
         android:text="SCORE:"/>
 
     <TextView
+        android:id="@+id/scoreNumTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/scoreNumTV"
+        android:gravity="center_horizontal"
         android:text="no score"
-        android:textSize="50sp"/>
+        android:textSize="50sp" />
 
 
 
