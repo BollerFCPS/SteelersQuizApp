@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,6 +20,13 @@ public class ScoreActivity extends AppCompatActivity {
     TextView scoreNumTV;
     ImageView logoIV;
     Button emailBut;
+    TextView scoreHeaderTV;
+    String name;
+
+    private SharedPreferences mPreferences;
+    private String sharedPrefFile = "SteelerPrefs";
+    private final String NAME_KEY = "Name";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +35,15 @@ public class ScoreActivity extends AppCompatActivity {
         scoreNumTV = (TextView) findViewById(R.id.scoreNumTV);
         logoIV = (ImageView) findViewById(R.id.logoIV);
         emailBut = (Button) findViewById(R.id.emailButton);
+        scoreHeaderTV = (TextView) findViewById(R.id.scoreHeader);
+
+        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+
+        name = mPreferences.getString(NAME_KEY, "User");
+
+        scoreHeaderTV.setText(name +"'s "+ getString(R.string.scoreHead));
+
+
 
         Intent incomingIntent = getIntent();
         int score = incomingIntent.getIntExtra("scoreName",0 );
