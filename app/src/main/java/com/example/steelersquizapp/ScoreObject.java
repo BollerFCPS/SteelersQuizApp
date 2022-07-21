@@ -29,12 +29,12 @@ public class ScoreObject implements Comparable{
 
     public int compareTo(Object compareVal){
         int compareScore = ((ScoreObject) compareVal).getScore();
-        return score - compareScore;
+        return  compareScore - score;
     }
 
 
 
-    public String toString(){return name + ":: " + score;}
+    public String toString(){return score + " " + name;}
 
 
 }

@@ -76,7 +76,7 @@ public class QuizActivity extends AppCompatActivity {
                 }
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
-                score += 1;
+                
                 Toast toast = Toast.makeText(context, message, duration);
                 toast.show();
             }

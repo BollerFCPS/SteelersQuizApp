@@ -21,13 +21,105 @@
         android:text="@string/no_score"
         android:textSize="50sp" />
 
-    <TextView
+    <Button
+        android:id="@+id/hsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#000000"
+        android:text="High Scores"
+        android:textColor="#FAFAFA" />
+
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/highScoreTV"
-        android:layout_gravity="center_horizontal"
-        android:text="Waiting"
-        android:textSize="32sp"/>
+        android:gravity="center_horizontal"
+        >
+
+        <TableRow android:gravity="center">
+
+            <TextView
+                android:padding="3dip"
+                android:text="Name"
+                android:textSize="20sp"
+
+                />
+
+            <TextView
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="Score"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow android:gravity="center">
+            <TextView
+                android:text=""
+                android:padding="3dip"
+                android:textSize="20sp"
+                android:id="@+id/namer0"/>
+            <TextView
+                android:text=""
+                android:gravity="right"
+                android:padding="3dip"
+                android:textSize="20sp"
+                android:id="@+id/scorer0"/>
+        </TableRow>
+        <TableRow android:gravity="center">
+            <TextView
+                android:text=""
+                android:padding="3dip"
+                android:textSize="20sp"
+                android:id="@+id/namer1"/>
+            <TextView
+                android:text=""
+                android:gravity="right"
+                android:padding="3dip"
+                android:textSize="20sp"
+                android:id="@+id/scorer1"/>
+        </TableRow>
+        <TableRow android:gravity="center">
+            <TextView
+                android:text=""
+                android:padding="3dip"
+                android:textSize="20sp"
+                android:id="@+id/namer2"/>
+            <TextView
+                android:text=""
+                android:gravity="right"
+                android:padding="3dip"
+                android:textSize="20sp"
+                android:id="@+id/scorer2"/>
+        </TableRow>
+        <TableRow android:gravity="center">
+            <TextView
+                android:text=""
+                android:padding="3dip"
+                android:textSize="20sp"
+                android:id="@+id/namer3"/>
+            <TextView
+                android:text=""
+                android:gravity="right"
+                android:padding="3dip"
+                android:textSize="20sp"
+                android:id="@+id/scorer3"/>
+        </TableRow>
+        <TableRow android:gravity="center">
+            <TextView
+                android:text=""
+                android:padding="3dip"
+                android:textSize="20sp"
+                android:id="@+id/namer4"/>
+            <TextView
+                android:text=""
+                android:gravity="right"
+                android:padding="3dip"
+                android:textSize="20sp"
+                android:id="@+id/scorer4"/>
+        </TableRow>
+
+
+    </TableLayout>
 
     <Button
         android:id="@+id/emailButton"
