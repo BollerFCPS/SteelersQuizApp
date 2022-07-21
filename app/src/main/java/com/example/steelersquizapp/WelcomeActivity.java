@@ -33,7 +33,7 @@ public class WelcomeActivity extends AppCompatActivity {
         myTextView = (TextView) findViewById(R.id.greeting);
         myEditText = (EditText) findViewById(R.id.typeName);
         submitButton = (Button) findViewById(R.id.submitButton);
-        bannerIV = (ImageView) findViewById(R.id.logoIV);
+        bannerIV = (ImageView) findViewById(R.id.bannerIV);
 
         name = "";
 

@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class QuizActivity extends AppCompatActivity {
 
     //declare variable for your UI elements
@@ -19,6 +22,7 @@ public class QuizActivity extends AppCompatActivity {
     int score, curIndex;
     question q1, q2, q3, q4, q5, curQ;
     question[] questions;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +88,8 @@ public class QuizActivity extends AppCompatActivity {
                 Intent showScore = new Intent(QuizActivity.this, ScoreActivity.class);
                 showScore.putExtra("scoreName", score);
                 startActivity(showScore);
+
+
             }
         });
 

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "47294107678",
+    "firebase_url": "https://quizappdb-cb59c-default-rtdb.firebaseio.com",
+    "project_id": "quizappdb-cb59c",
+    "storage_bucket": "quizappdb-cb59c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47294107678:android:3655078417487c964ade0f",
+        "android_client_info": {
+          "package_name": "com.example.steelersquizapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47294107678-pq5795quhpl1dl3vr6sn3cc86gls8shd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmZtHHZi0XD3GmXb9wMWWzi5QlLR3qODE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47294107678-pq5795quhpl1dl3vr6sn3cc86gls8shd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
